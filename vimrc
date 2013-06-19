@@ -152,7 +152,8 @@ set smarttab
 set noincsearch
 set ignorecase smartcase
 set laststatus=2  " Always show status line.
-set relativenumber
+#set relativenumber
+set number
 set gdefault " assume the /g flag on :s substitutions to replace all matches in a line
 set autoindent " always set autoindenting on
 set bg=light
@@ -245,7 +246,7 @@ function! RunCurrentTest()
       call SetTestRunner("!bin/rspec")
       exec g:bjo_test_runner g:bjo_test_file
     else
-      call SetTestRunner("!ruby -Itest")
+      call SetTestRunner("!jruby -Itest")
       exec g:bjo_test_runner g:bjo_test_file
     endif
   else
