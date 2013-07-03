@@ -33,3 +33,5 @@
 	user = markj9
 [merge]
         ff = only
+[credential]
+	helper = osxkeychain

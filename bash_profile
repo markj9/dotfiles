@@ -1,3 +1,4 @@
+export JAVA_OPTS="-Xmx2000M"
 source ~/.bash/aliases
 source ~/.bash/functions
 source ~/.bash/completions
