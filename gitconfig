@@ -31,7 +31,7 @@
 	enabled = 1
 [github]
 	user = markj9
-[merge]
-        ff = only
+#[merge]
+#        ff = only
 [credential]
 	helper = osxkeychain
