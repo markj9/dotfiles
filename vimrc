@@ -26,6 +26,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'wincent/Command-T'
 Bundle 'koron/nyancat-vim'
 Bundle 'vim-scripts/ruby-matchit'
+Bundle 'ecomba/vim-ruby-refactoring'
 
 " Clojure
 Bundle 'tpope/vim-foreplay'
@@ -273,13 +274,15 @@ function! RunCurrentTest()
     call SetTestFile()
 
     if match(expand('%'), '\.feature$') != -1
-      call SetTestRunner("!bin/cucumber")
+      "call SetTestRunner("!bin/cucumber")"
+      call SetTestRunner("!cucumber")
       exec g:bjo_test_runner g:bjo_test_file
     elseif match(expand('%'), '_spec\.rb$') != -1
-      call SetTestRunner("!bin/rspec")
+      "call SetTestRunner("!bin/rspec")"
+      call SetTestRunner("!rspec")
       exec g:bjo_test_runner g:bjo_test_file
     else
-      call SetTestRunner("!jruby -Itest")
+      call SetTestRunner("!ruby -Ilib:test")
       exec g:bjo_test_runner g:bjo_test_file
     endif
   else

@@ -5,4 +5,7 @@ tags
 log/
 db/*.sqlite3
 .netrwhist
+.idea
 project-notes.txt
+**/.DS_Store
+*.dump

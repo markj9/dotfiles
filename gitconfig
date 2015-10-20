@@ -13,7 +13,7 @@
         meta = yellow 
 
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore 
 	editor = vim --noplugin
 [apply]
 	whitespace = nowarn
@@ -35,3 +35,7 @@
 #        ff = only
 [credential]
 	helper = osxkeychain
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
